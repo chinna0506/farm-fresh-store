@@ -1,0 +1,182 @@
+.card {
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1.5px solid var(--border);
+  transition: var(--transition);
+  animation: fadeUp 0.45s ease both;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--green-light);
+}
+
+.imageWrap {
+  position: relative;
+  background: linear-gradient(135deg, var(--green-ultra) 0%, #f5fff8 100%);
+  padding: 28px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+}
+
+.emojiDisplay {
+  font-size: 72px;
+  line-height: 1;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.12));
+  transition: transform 0.3s ease;
+  user-select: none;
+}
+
+.card:hover .emojiDisplay {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+.badge {
+  position: absolute;
+  top: 12px; left: 12px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.badgeBestSeller { background: var(--amber); color: white; }
+.badgeOrganic { background: var(--green-mid); color: white; }
+.badgeFreshDaily { background: #3182ce; color: white; }
+.badgeArtisan { background: #805ad5; color: white; }
+.badgePremium { background: var(--green-dark); color: white; }
+.badgeHealthy { background: #38a169; color: white; }
+.badgeDefault { background: var(--green-pale); color: var(--green-mid); }
+
+.discount {
+  position: absolute;
+  top: 12px; right: 12px;
+  background: #e53e3e;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.body {
+  padding: 18px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.category {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green-light);
+}
+
+.name {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.3;
+}
+
+.desc {
+  font-size: 12.5px;
+  color: var(--text-light);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.prices {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--green-dark);
+  font-family: 'Playfair Display', serif;
+}
+
+.originalPrice {
+  font-size: 13px;
+  color: var(--text-light);
+  text-decoration: line-through;
+}
+
+.unit {
+  font-size: 11px;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.addBtn {
+  margin-top: 14px;
+  width: 100%;
+  padding: 11px;
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--green-mid);
+  color: white;
+  transition: all 0.22s ease;
+  cursor: pointer;
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  box-shadow: 0 2px 8px rgba(45,122,79,0.18);
+}
+
+.addBtn:hover {
+  background: var(--green-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-green);
+}
+
+.addBtn.added {
+  background: #38a169;
+  transform: scale(1.02);
+}
+
+.addBtn.inCart {
+  background: transparent;
+  border: 1.5px solid var(--green-mid);
+  color: var(--green-mid);
+  box-shadow: none;
+}
+
+.addBtn.inCart:hover {
+  background: var(--green-pale);
+  transform: translateY(-1px);
+}
+
+.cartNote {
+  text-align: center;
+  font-size: 11.5px;
+  color: var(--green-mid);
+  font-weight: 600;
+  margin-top: 2px;
+}

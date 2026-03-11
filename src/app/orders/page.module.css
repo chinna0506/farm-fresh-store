@@ -1,0 +1,76 @@
+.page { padding: 32px 40px; max-width: 800px; }
+.title { font-size: 30px; font-weight: 700; color: var(--text-dark); }
+.subtitle { font-size: 14px; color: var(--text-light); margin-top: 4px; margin-bottom: 28px; }
+
+.orderList { display: flex; flex-direction: column; gap: 16px; }
+
+.orderCard {
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: var(--transition);
+  animation: fadeUp 0.4s ease both;
+}
+.orderCard:hover { box-shadow: var(--shadow-md); border-color: var(--green-light); }
+
+.orderHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.orderId {
+  display: block;
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--green-dark);
+  margin-bottom: 3px;
+}
+
+.orderDate { font-size: 12.5px; color: var(--text-light); }
+
+.orderStatus {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.orderItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.orderItem {
+  background: var(--green-ultra);
+  border: 1px solid var(--border);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12.5px;
+  color: var(--text-mid);
+  font-weight: 500;
+}
+
+.orderFoot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.orderFoot strong {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: var(--green-dark);
+}
+
+@media (max-width: 600px) { .page { padding: 24px; } }
